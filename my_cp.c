@@ -5,7 +5,6 @@
 int main(int argc, char **argv) {
 	int i;
 	int ret = 0;
-	printf("%d\n", argc);
 
 	if (argc != 3)
 		fprintf(stderr, "Los arguntos no son los correctos. Recuerda: my_cp [file_to_copy] [new_path/path_to_folder]\n");
@@ -29,7 +28,6 @@ int main(int argc, char **argv) {
 		new_path[strlen(argv[2])] = '/';
 		strcpy(new_path+strlen(argv[2])+1, argv[1]);
 		new_fp = fopen(new_path, "w+");
-		printf("%s\n", new_path);
 	}
 
 
@@ -45,7 +43,5 @@ int main(int argc, char **argv) {
 	fclose(fp);	
 	fclose(new_fp);	
 	return ret;
-
-
 }
 
